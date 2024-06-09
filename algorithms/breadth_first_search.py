@@ -1,6 +1,5 @@
 from typing import Dict
 from ..datastructures.graph import Node
-from ..datastructures.graph import Graph
 from ..datastructures.queue import Queue
 
 
