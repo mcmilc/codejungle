@@ -1,4 +1,4 @@
-/* From Book: Algorithmic Thinking - Daniel Zingaro
+/* From Book: Algorithmic Thinking - Daniel Zingaro (Chapter 1)
 Example:
 
    Line 1: 3
