@@ -6,7 +6,7 @@ import math
 import math
 
 
-def get_primes_in_range(max_n):
+def get_primes_in_range(N):
     """Return list of prime numbers between 0 and N.
 
     Args:
@@ -16,7 +16,7 @@ def get_primes_in_range(max_n):
         list: prime numbers
     """
     # include 0 and max_n itself as index
-    idx_n = max_n + 1
+    idx_n = N + 1
     flags = [True] * idx_n
 
     # intialize flags array with flags[i] == True if i is prime
@@ -24,7 +24,7 @@ def get_primes_in_range(max_n):
     prime = 2
 
     # only iterate up to sqrt(max_n) but ensure using '<='
-    while prime <= math.sqrt(max_n):
+    while prime <= math.sqrt(N):
         # start with prime*prime because previous primes were already
         # checked off
         to_remove = prime * prime
