@@ -1,7 +1,7 @@
 """Implement a queue using two stacks"""
 
-from ..datastructures.queue import Queue
-from ..datastructures.stack import Stack
+from datastructures.queue import Queue
+from datastructures.stack import Stack
 
 
 class PseudoQueue:

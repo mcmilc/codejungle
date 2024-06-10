@@ -15,6 +15,7 @@ def get_primes_in_range(max_n):
     Returns:
         list: prime numbers
     """
+    # include 0 and max_n itself as index
     idx_n = max_n + 1
     flags = [True] * idx_n
 
@@ -27,11 +28,12 @@ def get_primes_in_range(max_n):
         # start with prime*prime because previous primes were already
         # checked off
         to_remove = prime * prime
+        # creates slice of list starting at to_remove, stoping at idx_n
+        # in steps of prime, example [4,6,8,10,...] (start with 2*2 in steps of 2)
         s_i = slice(to_remove, idx_n, prime)
-        _l = len(flags[s_i])
-
         # flag multiples of current prime as False
-        flags[s_i] = [False] * _l
+        flags[s_i] = [False] * len(flags[s_i])
+        # find next prime
         for i in range(to_remove + 1, idx_n):
             # locate next prime
             if not flags[i]:

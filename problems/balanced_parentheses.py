@@ -1,4 +1,4 @@
-from ..datastructures.stack import Stack
+from datastructures.stack import Stack
 
 
 class PBCB:

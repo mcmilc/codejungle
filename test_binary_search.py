@@ -1,4 +1,4 @@
-from ..algorithms.binary_search import binary_search
+from algorithms.binary_search import binary_search
 
 
 def test_ordered_list():

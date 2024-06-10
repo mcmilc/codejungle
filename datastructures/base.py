@@ -8,15 +8,15 @@ class Storage:
     """Base class for Queue and Stack"""
 
     def __init__(self) -> None:
-        self._elems = []
+        self._elements = []
 
-    def push(self, elem: Any) -> None:
+    def push(self, element: Any) -> None:
         """Add new element
 
         Args:
             elem (Any): element to be added
         """
-        self._elems.append(elem)
+        self._elements.append(element)
 
     def size(self) -> int:
         """Returns current number of elemens
@@ -24,7 +24,7 @@ class Storage:
         Returns:
             int: current number of elements
         """
-        return len(self._elems)
+        return len(self._elements)
 
     def is_empty(self):
         """Check if storage structure is empty.
@@ -32,7 +32,7 @@ class Storage:
         Returns:
             bool: True if structure is empty otherwise False
         """
-        if not self._elems:
+        if not self._elements:
             return True
         return False
 

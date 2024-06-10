@@ -14,15 +14,15 @@ while a <=b
 
 import math
 from typing import List
-from typing import SupportsFloat
+from typing import Union
 
 
-def binary_search(sorted_array: List[SupportsFloat], n: SupportsFloat) -> int:
+def binary_search(sorted_array: List[Union[float, int]], n: float) -> int:
     """Binary search algorithm
 
     Args:
-        sorted_array (List[SupportsFloat]): Sorted array with numeric values
-        n (SupportsFloat): The number we're looking for
+        sorted_array (List[float]): Sorted array with numeric values
+        n (float): The number we're looking for
 
     Returns:
         int: -1 if not found otherwise index of array that contains the n
@@ -42,3 +42,7 @@ def binary_search(sorted_array: List[SupportsFloat], n: SupportsFloat) -> int:
         else:
             a = idx + 1
     return -1
+
+
+if __name__ == "__main__":
+    pass
