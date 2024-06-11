@@ -1,11 +1,16 @@
 def find_two_max(arr):
-    largest = arr[0]
-    second_largest = arr[0]
-    for item in arr:
+    assert len(arr) > 1
+    if arr[0] > arr[1]:
+        largest = arr[0]
+        second_largest = arr[1]
+    else:
+        largest = arr[1]
+        second_largest = arr[0]
+    for item in arr[2:]:
         if item > largest:
             second_largest = largest
             largest = item
-        elif item > second_largest and item != largest:
+        elif item > second_largest:
             second_largest = item
     return largest, second_largest
 
