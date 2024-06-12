@@ -1,7 +1,7 @@
 def last_digit_partial_fibonacci_sum(m, n):
     assert m <= n
     if n == 0:
-        return 0, 0
+        return 0
     y = [0] * (n + 1)
     s = [0] * ((n - m) + 1)
     y[0] = 0

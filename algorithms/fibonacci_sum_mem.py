@@ -1,4 +1,4 @@
-def last_digit_fibonacci_sum(n):
+def fibonacci_sum(n):
     if n == 0:
         return 0
     y_0 = 0
@@ -12,9 +12,9 @@ def last_digit_fibonacci_sum(n):
         y_2 = y_1 + y_0
         s_1 = s_2
         s_2 = s_1 + y_2
-    return s_2 % 10
+    return s_2
 
 
 if __name__ == "__main__":
     n = int(input())
-    print(last_digit_fibonacci_sum(n))
+    print(fibonacci_sum(n))
