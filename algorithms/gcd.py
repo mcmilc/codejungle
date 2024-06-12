@@ -1,5 +1,7 @@
 def gcd(n, m):
     """Greatest Common Divisor"""
+    if n == 1 or m == 1:
+        return 1
     if m == 0:
         return n
     else:

@@ -11,7 +11,7 @@ def gcd(n, m):
 
 def lcm(n, m):
     k = gcd(n, m)
-    return n * m / k
+    return int(n * m / k)
 
 
 if __name__ == "__main__":
