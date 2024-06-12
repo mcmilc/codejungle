@@ -5,10 +5,12 @@ def last_digit_fibonacci(n):
     y_0 = 0
     y_1 = 1
     y_2 = 1
-    for i in range(2, n):
+    i = 2
+    while i < n:
         y_0 = y_1
         y_1 = y_2
         y_2 = y_1 + y_0
+        i += 1
         # y[i] = y[i - 1] + y[i - 2]
     return y_2 % 10
 

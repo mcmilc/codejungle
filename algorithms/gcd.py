@@ -1,22 +1,20 @@
 def gcd(n, m):
     """Greatest Common Divisor"""
+    if n < m:
+        tmp = m
+        m = n
+        n = tmp
     if n == 1 or m == 1:
         return 1
-    if n > m:
-        if m > n / 2:
-            return 1
-    elif m > n:
-        if n > m / 2:
-            return 1
     if n == m:
         return n
     if m == 0:
         return n
+    remainder = n % m
+    if remainder == 0:
+        return m
     else:
-        if n > m:
-            return gcd(m, n - m)
-        else:
-            return gcd(n, m - n)
+        return gcd(m, remainder)
 
 
 if __name__ == "__main__":
