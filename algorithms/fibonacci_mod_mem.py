@@ -99,4 +99,4 @@ def fibonacci_mod(n, m):
 
 if __name__ == "__main__":
     n, m = map(int, input().split())
-    print(fibonacci_mod_mem_fast(n, m))
+    print(fibonacci_mod_mem(n, m))
