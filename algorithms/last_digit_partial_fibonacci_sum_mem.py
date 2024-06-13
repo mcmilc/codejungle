@@ -5,7 +5,7 @@ def last_digit_partial_fibonacci_sum(m, n):
     y_0 = 0
     y_1 = 1
     y_2 = 1
-    if m == 0:
+    if m >= 0:
         s_1 = 1
         s_2 = 2
     i = 2
