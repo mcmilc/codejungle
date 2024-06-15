@@ -19,8 +19,8 @@ def last_digit_partial_fibonacci_sum(m, n):
         if i == (m - 1):
             s_2 = y_2
         elif i >= m:
-            s_1 = s_2
-            s_2 = s_1 + y_2
+            # s_1 = s_2
+            s_2 += y_2
         i += 1
     return s_2 % 10
 
