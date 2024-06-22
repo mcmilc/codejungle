@@ -1,3 +1,7 @@
+def test_fibonacci_benchmark(benchmark):
+    benchmark(fibonacci_mod_mem, 1000000, 2)
+
+
 def fibonacci_last_digit(n):
     L = 60
     mods = [

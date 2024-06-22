@@ -8,8 +8,7 @@ def fibonacci_sum(n):
     s_2 = 2
     i = 2
     while i < n:
-        y_0 = y_1
-        y_1 = y_2
+        y_0, y_1 = y_1, y_2
         y_2 = y_1 + y_0
         s_1 = s_2
         s_2 = s_1 + y_2
