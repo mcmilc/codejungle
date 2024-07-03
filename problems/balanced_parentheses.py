@@ -1,4 +1,4 @@
-from datastructures.stack import Stack
+from ..datastructures.stack import Stack
 
 
 class PBCB:
@@ -32,7 +32,10 @@ class ParenthesisPair:
         self.opening_char = opening_char
         self.closing_char = closing_char
 
-    def is_valid(self):
+    def _is_valid(self):
+        """
+        Only used in __repr__
+        """
         if self.opened and self.closed:
             return True
 
@@ -40,7 +43,7 @@ class ParenthesisPair:
         return char == PBCB.get_opposite_pbcb(self.opening_char)
 
     def __repr__(self):
-        if self.is_valid():
+        if self._is_valid():
             return f"Valid node with content {self.opening_char}{self.closing_char}"
         else:
             return f"Invalid node with content {self.opening_char}{self.closing_char}"
@@ -53,17 +56,17 @@ def validate_parenthesis_pairs(s: str):
     for c in s:
         if PBCB.is_closing(c):
             if stack.is_empty():
-                node = ParenthesisPair(closed=True, closing_char=c)
-                invalid_nodes.append(node)
+                par_pair = ParenthesisPair(closed=True, closing_char=c)
+                invalid_nodes.append(par_pair)
             else:
-                node = stack.pop()
-                node.closing_char = c
-                if node.matches_opposite(c):
-                    node.closed = True
-                    valid_nodes.append(node)
+                par_pair = stack.pop()
+                par_pair.closing_char = c
+                if par_pair.matches_opposite(c):
+                    par_pair.closed = True
+                    valid_nodes.append(par_pair)
                 else:
-                    invalid_nodes.append(node)
+                    invalid_nodes.append(par_pair)
         elif PBCB.is_opening(c):
-            node = ParenthesisPair(opened=True, opening_char=c)
-            stack.push(node)
+            par_pair = ParenthesisPair(opened=True, opening_char=c)
+            stack.push(par_pair)
     return valid_nodes, invalid_nodes
