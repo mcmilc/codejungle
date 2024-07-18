@@ -1,3 +1,55 @@
+"""
+Based on problem 6.3 in book:
+
+"Ace you next coding interview by Learning Algorithms"
+by Kulikov, Pevzner
+
+Example:
+- 4 pounds saffron at 5000 $
+- 3 pounds vanilla at 200 $
+- 5 pounds cinnamon at 10 $
+
+=> divide into value/pound
+
+c_1 = 5000/w_1 => v_1 = 1250 $
+c_2 = 200/3 => v_2 = 66.7 $
+c_3 = 10/5 => v_3 = 2 $
+
+Algo:
+
+Input:
+    total_compound_values: [v_1, v_2, v_3]
+    total_compound_weights:  [w_1, w_2, w_3]
+    backpack_weight: W
+Output:
+    Place compounds in backpack so its content is maximized.
+    Return stolen value.
+
+stolen_value <- 0
+normalized_values <- [v_1/w_1, v_2/w_2, v_3/w_3]
+
+# !super important!: check for whether we still have compunds left in while loop
+while backpack is not full AND compounds left in inventory:
+    max_i <- get index of max-value compound
+
+    calc_weight <- calculate weight of max-value compound without exceeding backpack weight
+
+    value_of_current_compound <- calculate the value
+
+    put amount of compound into backpack
+
+    update backpack weight
+
+    subtract removed weight from inventory
+
+    remove compound from inventory if its weight is zero
+
+    update stolen value
+
+return stolen_value
+"""
+
+
 def arg_max(a):
     L = len(a)
     assert L > 0
