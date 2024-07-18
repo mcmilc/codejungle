@@ -63,6 +63,17 @@ def arg_max(a):
 
 
 def max_loot(W, weights, costs):
+    """
+    Args:
+
+    :param W (int): Total weight of bag
+    :param weights (List[int]): Total weight of each compound
+    :param costs ((List[int]): Total cost of each compound
+
+    Returns:
+
+    Total cost of bag content (float)
+    """
     if W == 0:
         return 0
     assert len(weights) == len(costs)

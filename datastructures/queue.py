@@ -15,6 +15,6 @@ class Queue(base.Storage):
         """
         if self.size() > 0:
             # get and remove first element of array
-            elem = self._elems[0]
-            self._elems = self._elems[1:]
+            elem = self._elements[0]
+            self._elements = self._elements[1:]
             return elem
