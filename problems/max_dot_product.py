@@ -1,3 +1,15 @@
+"""
+Based on problem 6.5 in book:
+
+"Ace you next coding interview by Learning Algorithms"
+by Kulikov, Pevzner
+
+Algo:
+    remove current maxima from both arrays, multiply ad repeat
+    on reduced arrays until empty. 
+"""
+
+
 def arg_max(a):
     L = len(a)
     assert L > 0
