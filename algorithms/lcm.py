@@ -18,6 +18,7 @@ def gcd(n, m):
 
 
 def lcm(n, m):
+    "Least Common Multiple"
     k = gcd(n, m)
     return int(n * m / k)
 
