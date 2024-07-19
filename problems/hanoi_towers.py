@@ -1,4 +1,9 @@
-"""From book "Ace your next coding interview by Learning Algorithms" """
+"""
+Based on chapter 3.3 in book:
+
+"Ace you next coding interview by Learning Algorithms"
+by Kulikov, Pevzner
+"""
 
 
 def hanoi_towers(n, from_peg, to_peg, total_moves):
