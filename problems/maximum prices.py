@@ -1,5 +1,5 @@
 """
-Based on problem 6.3 in book:
+Based on problem 6.7 in book:
 
 "Ace you next coding interview by Learning Algorithms"
 by Kulikov, Pevzner
